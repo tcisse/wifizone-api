@@ -123,6 +123,30 @@ npm start
 
 Le serveur démarrera sur `http://localhost:5000`
 
+## Database Seeding
+
+Pour peupler la base de données avec des données de test :
+
+```bash
+# Voir l'avertissement (ne fait rien)
+npm run seed
+
+# Exécuter le seed (efface toutes les données existantes!)
+npm run seed:force
+```
+
+Le script créera :
+- **1 admin** : `admin@wifizone.com` / `Admin@123`
+- **4 utilisateurs** :
+  - `kouadio.jean@example.com` / `User@123` (KYC vérifié, 2 zones)
+  - `yao.marie@example.com` / `User@123` (KYC vérifié, 2 zones)
+  - `kone.ibrahim@example.com` / `User@123` (KYC en attente, 1 zone)
+  - `traore.fatou@example.com` / `User@123` (Nouveau compte)
+- **5 zones WiFi** (Plateau, Cocody, Yopougon, Marcory, Abobo)
+- **12 plans tarifaires** (3 plans par zone active)
+- **~500 tickets** (disponibles, vendus, utilisés)
+- **Transactions**, **Retraits** et **Notifications** de test
+
 ## Endpoints API
 
 ### Authentification
